@@ -1,42 +1,36 @@
-html, body
-    height: 100%
+html
+  min-width: $layout-min-width
+  height: 100%
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
 
 ::selection
-    background: $select-text-bg
-    color: $select-text-color
+  background: $select-text-bg
+  color: $select-text-color
 
 ::-moz-selection
-    background: $select-text-bg
-    color: $select-text-color
-
-.main-wrapper
-    min-height: 100%
-    height: auto !important
-    height: 100%
-
-    @media (min-width: $layout-min-width)
-        min-width: $layout-min-width
-        max-width: $layout-max-width
-        margin: 0 auto
+  background: $select-text-bg
+  color: $select-text-color
 
 .header
-    height: $header-height
-    background: #d3d3d3
+  flex: 0 0 auto
+  height: $header-height
+  background: #127BB9
+  color: white
 
 .content
-    padding: 0 0 $footer-height
+  flex: 1 0 auto
 
 .wrapper
-    @media (min-width: $layout-min-width)
-        width: $layout-min-width
-        margin: 0 auto
+  width: $layout-min-width
+  max-width: $layout-max-width
+  margin: 0 auto
 
 .footer
-    margin: -$footer-height auto 0
-    height: $footer-height
-    position: relative
-    background: #d3d3d3
-
-    @media (min-width: $layout-min-width)
-        min-width: $layout-min-width
-        max-width: $layout-max-width
+  flex: 0 0 auto
+  height: $footer-height
+  background: #127BB9
+  color: white
